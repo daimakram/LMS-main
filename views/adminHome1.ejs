@@ -1,0 +1,41 @@
+<%-include("partials/header");-%>
+<body class="adminHome">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <h1>Welcome Admin!</h1>
+
+
+    <form action="/adminHome" method="GET">
+    <div>
+        <div>
+            <button type="submit"  formaction="/register">Create Account </button>
+        </div>
+        <br>
+        <div>
+            <button type="submit" formaction="/delete">Delete Account</button>
+        </div>
+        <br>
+        <div>
+            <button type="submit" formaction="/addNewCourse">Add New Course</button>
+        </div>
+        <br>
+        <div>
+            <button type="submit" formaction="/removeExistingCourse">Remove Existing Course</button>
+        </div>
+        <br>
+        <div>
+            <button type="submit" formaction="/updateProfile">Update Profile of a User</button>
+        </div>
+        <br>
+        <div>
+            <button type="submit" formaction="/updatePassword">Update Password</button>
+        </div>
+        <br>
+        <div>
+            <button type="submit" formaction="/logout">Log out</button>
+        </div>
+    </div>
+    </form>
+    <h3><%=message%></h3>
+    <!-- <<script src="/js/index.js"></script> -->
+</body>
+</html>
