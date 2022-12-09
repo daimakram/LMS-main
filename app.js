@@ -206,11 +206,6 @@ app.get("/register",(req,res)=>{
 
 app.get("/logout",(req,res)=>{
   req.session.destroy();
-  req.cookies.set('username', {maxAge: 0});
-  req.cookies.set('courseID', {maxAge: 0});
-  req.cookies.set('sem', {maxAge: 0});
-  req.cookies.set('year', {maxAge: 0});
-  
   res.render("main", {message: "Logged Out!"});
 })
 
@@ -441,7 +436,7 @@ app.post("/CreateAnnouncement", (req, res)=> {
 //   res.render("viewAnnouncements", {message: ""});
 // })
 
-app.post("/viewAnnouncements", (req, res) => {
+app.get("/viewAnnouncements", (req, res) => {
   //courseID = req.session.userinfo.courseID; // need to somehow store the course's specific ids here
   //sem = req.session.userinfo.sem;
   //year = req.session.userinfo.year;
